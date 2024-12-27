@@ -1,0 +1,247 @@
+.profile-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px 40px;
+  background-color: #f5f7fa;
+}
+
+.profile-content {
+  width: 100%;
+  max-width: 700px;
+  min-height: calc(100vh - 170px);
+  padding: 40px 50px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  animation: slideInFromTop 0.5s ease forwards;
+}
+
+.profile-content h1 {
+  text-align: center;
+  color: #4a5568;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  font-weight: 600;
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 20px;
+}
+
+.profile-content p {
+  margin: 20px 0;
+  padding: 20px 30px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  color: #4a5568;
+  transition: all 0.2s ease;
+}
+
+.profile-content p:hover {
+  background-color: #edf2f7;
+}
+
+.profile-content strong {
+  color: #718096;
+  font-weight: 600;
+  min-width: 180px;
+}
+
+.profile-content p span {
+  flex: 1;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.profile-content a {
+  color: #666666;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background-color: #edf2f7;
+  display: inline-block;
+}
+
+.profile-content a:hover {
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+.edit-form {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.edit-input {
+  flex: 1;
+  margin-left: 30px;
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1em;
+  color: #4a5568;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #4A90E2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.edit-button {
+  padding: 20px 30px;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #357ABD;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+}
+
+.logout-button {
+  padding: 20px 30px;
+  background-color: #CD6648;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #b85a3f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(205, 102, 72, 0.3);
+}
+
+.save-button {
+  padding: 20px 30px;
+  background-color: #48BB78;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #38A169;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(72, 187, 120, 0.3);
+}
+
+.cancel-button {
+  padding: 20px 30px;
+  background-color: #E2E8F0;
+  color: #4A5568;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #CBD5E0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-badge {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: none;
+  display: inline-block;
+}
+
+.subscription-badge.basic {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.subscription-badge.pro {
+  background-color: #4A90E2;
+  color: white;
+}
+
+.subscription-badge.team {
+  background-color: #CD6648;
+  color: white;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+    padding-top: 40px;
+  }
+
+  .profile-content {
+    padding: 30px;
+  }
+
+  .profile-content p {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .profile-content strong {
+    margin-bottom: 10px;
+    min-width: unset;
+  }
+
+  .profile-content p span {
+    margin-left: 0;
+  }
+
+  .edit-input {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group button {
+    width: 100%;
+  }
+}

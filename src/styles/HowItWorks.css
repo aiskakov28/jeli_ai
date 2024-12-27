@@ -1,0 +1,173 @@
+.how-it-works-section {
+  padding: 3rem 5%;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-marker {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: #f5f5f5;
+  border-radius: 20px;
+  color: var(--gray);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-marker::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--orange);
+  border-radius: 50%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--gray);
+  margin-bottom: 4rem;
+}
+
+.steps-container {
+  position: relative;
+  padding: 0 100px;
+}
+
+.steps-container::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--orange);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.step {
+  display: flex;
+  margin-bottom: 6rem;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.6s ease-out;
+  width: 100%;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.step:nth-child(even) {
+  justify-content: flex-end;
+  transform: translateX(20px);
+}
+
+.step-content {
+  width: 45%;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.step-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.step-content h3 {
+  font-size: 1.8rem;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.step-content p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--orange);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.step:nth-child(odd)::after {
+  right: calc(55% - 10px);
+}
+
+.step:nth-child(even)::after {
+  left: calc(55% - 10px);
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: var(--orange);
+  top: 50%;
+  width: 10%;
+}
+
+.step:nth-child(odd)::before {
+  right: 45%;
+}
+
+.step:nth-child(even)::before {
+  left: 45%;
+}
+
+@media (max-width: 1024px) {
+  .steps-container {
+    padding: 0 50px;
+  }
+
+  .step-content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    padding: 0 20px;
+  }
+
+  .step-content {
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+.step-content h3 {
+  font-size: 1.8rem;
+  color: var(--gray);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.step-content:hover h3 {
+  color: var(--orange);
+}

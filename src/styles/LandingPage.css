@@ -1,0 +1,213 @@
+:root {
+  --orange: #CD6648;
+  --gray: #495057;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding: 0.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background: white !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5%;
+  margin-top: -4rem;
+}
+
+.dot-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#212529 2px, transparent 2px);
+  background-size: 24px 24px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.curved-line {
+  position: absolute;
+  bottom: 22%;
+  left: 60%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100px;
+  z-index: 1;
+}
+
+.curved-line svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.curved-line path {
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  transform: translateY(-2rem);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  color: var(--gray) !important;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hero-content h1 span {
+  color: var(--orange);
+}
+
+.hero-subtitle {
+  font-size: 3.5rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  color: var(--gray);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white !important;
+}
+
+.primary-button {
+  position: relative;
+  z-index: 3;
+  padding: 1.2rem 3rem;
+  background: var(--orange);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: buttonPulse 2s infinite;
+  overflow: hidden;
+}
+
+.primary-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: buttonShine 3s infinite;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(205, 102, 72, 0.3);
+  background: #b85a3f;
+  animation: none;
+}
+
+.primary-button:hover::before {
+  animation: buttonShineHover 1s forwards;
+}
+
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(205, 102, 72, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(205, 102, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(205, 102, 72, 0);
+  }
+}
+
+@keyframes buttonShine {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes buttonShineHover {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
