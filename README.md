@@ -2,6 +2,7 @@
 
 Effortless Networking with AI—Jeli.ai helps you connect, organize, and scale your professional outreach, making networking powerful and stress-free.
 
+! [Jeli.ai Frontpage](Jeli_AI_Frontpage.png)
 ---
 
 ## Overview
