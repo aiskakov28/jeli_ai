@@ -1,0 +1,14 @@
+{
+  "name": "@jeli/ui",
+  "version": "0.0.1",
+  "private": false,
+  "type": "module",
+  "main": "index.ts",
+  "license": "MIT",
+  "sideEffects": false,
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "zustand": ">=4"
+  }
+}

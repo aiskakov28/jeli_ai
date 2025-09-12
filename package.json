@@ -1,29 +1,16 @@
 {
-  "name": "network_ai",
-  "version": "0.1.0",
+  "name": "jeli-ai",
   "private": true,
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.28.1",
-    "react-scripts": "5.0.1"
-  },
+  "packageManager": "pnpm@9",
+  "workspaces": ["packages/*"],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test:e2e": "playwright test"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "typescript": "^5.4.0"
   }
 }
