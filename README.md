@@ -55,40 +55,45 @@ Jeli.ai is your AI-powered assistant for managing LinkedIn and professional outr
 > ```
 
 ---
-
-## 🛠 Getting Started
+## 🚀 Getting Started
 
 ### Clone the Repository
-
 ```bash
 git clone https://github.com/aiskakov28/jeli_ai.git
 cd jeli_ai
-Install Dependencies
-bash
-Copy code
+```
+
+### Install Dependencies
+```bash
 pnpm install
+```
+
 Run Development Server
-bash
-Copy code
+```bash
 pnpm dev
 # ➜ http://localhost:3000
+```
+
 ⚡ Build & Start
-bash
-Copy code
+```bash
 pnpm build
 pnpm start
-🧪 Run E2E (local)
-bash
-Copy code
+```
+
+🧪 Run E2E (Local)
+```bash
 # install browsers once
 pnpm exec playwright install
 
 # run tests
 pnpm exec playwright test
+```
+
 🔄 Continuous Integration
+
 This repo includes GitHub Actions (.github/workflows/playwright.yml) that:
 
-Install deps with pnpm
+Install dependencies with pnpm
 
 Build the Next.js app
 
@@ -99,6 +104,7 @@ Run Playwright E2E tests
 Upload the HTML test report as an artifact
 
 🧩 Example Workflow
+
 See all “Potential Connects” on the dashboard.
 
 Open a profile and generate a personalized message.
@@ -108,6 +114,9 @@ Mark as Pending after outreach.
 Move to Connected once accepted and continue nurture.
 
 💡 Why Jeli.ai?
-Jeli turns networking from a manual, overwhelming process into a streamlined, intelligent experience powered by AI. Whether you’re job hunting, selling, or building a professional ecosystem, Jeli.ai helps you connect the dots quickly and meaningfully.
 
-👉 Try Jeli now and take your network to the next level!
+Streamlines outreach
+
+Powers personalized connections with AI
+
+Helps you focus on relationships, not manual tasks
