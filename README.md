@@ -89,34 +89,31 @@ pnpm exec playwright install
 pnpm exec playwright test
 ```
 
-🔄 Continuous Integration
+## 🔄 Continuous Integration
 
-This repo includes GitHub Actions (.github/workflows/playwright.yml) that:
+This repo includes **GitHub Actions** (`.github/workflows/playwright.yml`) that:
 
-Install dependencies with pnpm
+- 📦 Install dependencies with **pnpm**
+- ⚡ Build the **Next.js** app
+- 🚀 Start the server
+- 🧪 Run **Playwright** E2E tests
+- 📊 Upload the HTML test report as an artifact
 
-Build the Next.js app
+---
 
-Start the server
+## 🧩 Example Workflow
 
-Run Playwright E2E tests
+1. 🔍 See all **“Potential Connects”** on the dashboard  
+2. ✉️ Open a profile and generate a personalized message  
+3. ⏳ Mark as **Pending** after outreach  
+4. 🤝 Move to **Connected** once accepted and continue nurture  
 
-Upload the HTML test report as an artifact
+---
 
-🧩 Example Workflow
+## 💡 Why Jeli.ai?
 
-See all “Potential Connects” on the dashboard.
-
-Open a profile and generate a personalized message.
-
-Mark as Pending after outreach.
-
-Move to Connected once accepted and continue nurture.
-
-💡 Why Jeli.ai?
-
-Streamlines outreach
-
-Powers personalized connections with AI
+- ⚡ **Streamlines outreach**  
+- 🤖 **Powers personalized connections with AI**  
+- 🎯 **Helps you focus on relationships, not manual tasks**  
 
 Helps you focus on relationships, not manual tasks
