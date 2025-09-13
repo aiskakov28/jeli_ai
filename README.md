@@ -1,76 +1,113 @@
 # Jeli.ai
 
-Effortless Networking with AI—Jeli.ai helps you connect, organize, and scale your professional outreach, making networking powerful and stress-free.
+Effortless Networking with AI — Jeli.ai helps you connect, organize, and scale your professional outreach, making networking powerful and stress-free.
 
-! [Jeli.ai Frontpage](Jeli_AI_frontpage.png)
+![Jeli.ai Frontpage](Jeli_AI_frontpage.png)
+
 ---
 
 ## Overview
 
-Jeli.ai is your AI-powered assistant for managing LinkedIn and professional outreach. Save time, build meaningful connections, and let Jeli automate the tedious parts of your networking workflow. Simply focus on the conversations that matter—Jeli takes care of the rest.
+Jeli.ai is your AI-powered assistant for managing LinkedIn and professional outreach. Save time, build meaningful connections, and let Jeli automate the tedious parts of your networking workflow. Simply focus on the conversations that matter — Jeli takes care of the rest.
 
 ---
 
-## Features
+## 🚀 Tech Stack
+
+- **Frontend:** React, **Next.js** (App Router, TypeScript), **Tailwind CSS**, PostCSS  
+- **State:** **Zustand**  
+- **UI Package:** `packages/ui` (shared components + store)  
+- **E2E Testing:** **Playwright** (+ GitHub Actions CI)  
+- **Package Manager:** **pnpm**  
+- **Node:** 18+ (also tested on 20)
+
+---
+
+## ✨ Features
 
 - **Automated LinkedIn Outreach**
   - Identify potential connections based on your goals and interests.
   - AI-driven suggestions for who to reach out to next.
-
 - **Dashboard for Pipeline Management**
-  - Visualize your networking progress with clear columns: “Yet to Reach Out,” “Pending,” and “Connected.”
-  - Easily track the status of each contact and take action (reach out, follow up, or reconnect).
-
+  - Columns for **Yet to Reach Out**, **Pending**, **Connected**.
+  - Move contacts between stages and take actions quickly.
 - **Follow-Up Reminders**
-  - Never lose track of pending replies or follow-ups.
-  - Get reminders to send a message or check back in with network contacts.
-
+  - Keep track of replies and scheduled nudges.
 - **Personalized Messaging**
-  - AI-powered message suggestions for first contacts and follow-ups.
-  - Templates for cold emails and LinkedIn messages.
-
+  - AI-generated first-touch and follow-up drafts.
+  - Cold email / LinkedIn templates.
 - **Network Organization**
-  - Group connections based on interaction status.
-  - See your entire network at a glance and strategize your next moves.
+  - Group contacts by status and see your pipeline at a glance.
 
 ---
 
-## How Jeli.ai Helps You
+## 📁 Project Highlights
 
-- **Saves Time:** Automates repetitive outreach tasks, so you spend less time managing spreadsheets and messages.
-- **Increases Opportunities:** Ensures you don’t lose touch with key contacts or miss out on follow-ups.
-- **Streamlines Workflow:** Intuitive dashboards let you focus on strategic networking, not on busywork.
-- **Boosts Response Rates:** AI-crafted, personalized messages help your outreach stand out from the crowd.
+- `app/` — Next.js App Router pages (e.g., `app/page.tsx`, `app/dashboard/page.tsx`)  
+- `app/api/health/route.ts` — simple health-check endpoint  
+- `packages/ui/` — shared UI & Zustand store (`index.ts`, `store.ts`)  
+- `tests/e2e/` — Playwright specs (`smoke.spec.ts`)  
+- `.github/workflows/playwright.yml` — CI for build + e2e  
 
----
-
-## Getting Started
-
-1. **Sign up for Jeli.ai** and connect your LinkedIn profile.
-2. **Set outreach goals**—target industries, roles, or individuals.
-3. **Use the Dashboard**: Track contacts under “Yet to Reach Out,” “Pending,” or “Connected.”
-4. **Send Outreach** via AI suggestions, and never miss a follow-up.
-5. **Grow Your Network** with smart reminders and streamlined messaging.
+> `next.config.js` includes:
+> ```js
+> transpilePackages: ["zustand", "@jeli/ui"]
+> ```
 
 ---
 
-## Example Workflow
+## 🛠 Getting Started
 
-1. See all “Potential Connects” in one list.
-2. Select a profile and use AI to craft a personalized message.
-3. Mark contacts as “Pending” after initial outreach.
-4. Once connected, move them to your network and manage ongoing communication—all tracked in one place.
+### Clone the Repository
 
----
+```bash
+git clone https://github.com/aiskakov28/jeli_ai.git
+cd jeli_ai
+Install Dependencies
+bash
+Copy code
+pnpm install
+Run Development Server
+bash
+Copy code
+pnpm dev
+# ➜ http://localhost:3000
+⚡ Build & Start
+bash
+Copy code
+pnpm build
+pnpm start
+🧪 Run E2E (local)
+bash
+Copy code
+# install browsers once
+pnpm exec playwright install
 
-## Why Jeli.ai?
+# run tests
+pnpm exec playwright test
+🔄 Continuous Integration
+This repo includes GitHub Actions (.github/workflows/playwright.yml) that:
 
-Jeli turns networking from a manual, overwhelming process into a streamlined, intelligent experience powered by AI. Whether you’re job hunting, selling, or building a professional ecosystem, Jeli.ai empowers you to connect the dots quickly and meaningfully.
+Install deps with pnpm
 
----
+Build the Next.js app
 
-Let Jeli.ai handle the details—so you can focus on building real relationships.
+Start the server
 
----
+Run Playwright E2E tests
 
-**Try Jeli Now and take your network to the next level!**
+Upload the HTML test report as an artifact
+
+🧩 Example Workflow
+See all “Potential Connects” on the dashboard.
+
+Open a profile and generate a personalized message.
+
+Mark as Pending after outreach.
+
+Move to Connected once accepted and continue nurture.
+
+💡 Why Jeli.ai?
+Jeli turns networking from a manual, overwhelming process into a streamlined, intelligent experience powered by AI. Whether you’re job hunting, selling, or building a professional ecosystem, Jeli.ai helps you connect the dots quickly and meaningfully.
+
+👉 Try Jeli now and take your network to the next level!
