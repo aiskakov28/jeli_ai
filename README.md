@@ -1,6 +1,6 @@
 # Jeli.ai
 
-Effortless Networking with AI — Jeli.ai helps you connect, organize, and scale your professional outreach, making networking powerful and stress-free.
+Effortless Networking with AI: Jeli.ai helps you connect, organize, and scale your professional outreach, making networking powerful and stress-free.
 
 ![Jeli.ai Frontpage](Jeli_AI_frontpage.png)
 
@@ -8,7 +8,7 @@ Effortless Networking with AI — Jeli.ai helps you connect, organize, and scale
 
 ## Overview
 
-Jeli.ai is your AI-powered assistant for managing LinkedIn and professional outreach. Save time, build meaningful connections, and let Jeli automate the tedious parts of your networking workflow. Simply focus on the conversations that matter — Jeli takes care of the rest.
+Jeli.ai is your AI-powered assistant for managing LinkedIn and professional outreach. Save time, build meaningful connections, and let Jeli automate the tedious parts of your networking workflow. Simply focus on the conversations that matter; Jeli takes care of the rest.
 
 ---
 
